@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram || Babar Azam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 70%;
+            background-color: white;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 1px 1px 15px gray;
+            margin: 0 auto;
+            padding: 25px 10px 35px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .name img {
+            width: 70px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+
+        .name .author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .author .div {
+            background-color: #aad4ed;
+            text-shadow: 1px 1px 8px gray;
+            color: white;
+            font-weight: bold;
+            height: 30px;
+            text-align: center;
+            width: 30px;
+            padding: 3px;
+            border-radius: 50%;
+        }
+
+        .img {
+            width: 100%;
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+        /* likes */
+        .likes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+        }
+        .first img{
+            width: 50px;
+            margin-right: 10px;
+        }
+        .first span{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .second button{
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            transition: all 1s ease;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .second button:hover{
+            background-color: rgb(235, 235, 235);
+        }
+        .date,.views{
+            color: gray;
+            margin-top: 10px;
+        }
+        .views{
+            margin-bottom: 10px;
+        }
+        .desc{
+            font-size: 20px;
+            word-spacing: 3px;
+        }
+        @media screen and (max-width: 700px) {
+           .container{
+            width: 90%
+           }
+        }
+        @media screen and (max-width: 500px) {
+           .setting{
+            display: none;
+           }
+           .name img{
+            width: 50px;
+            margin-right: 10px;
+           }
+           .likes img{
+            width: 30px;
+           }
+        }
+        @media screen and (max-width: 375px) {
+           .babar h1{
+            font-size: 25px;
+           }
+           .babar p{
+            font-size: 15px;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="user">
+                <div class="name">
+                    <img src="https://pbs.twimg.com/profile_images/1438817879332425730/anYBmFZz_400x400.jpg"
+                        alt="Profile Pic">
+                    <div class="author">
+                        <div class="babar">
+                            <h1>Babar Azam</h1>
+                            <p>Pakistani Cricketer</p>
+                        </div>
+                        <div class="div">✓</div>
+                    </div>
+                </div>
+                <div class="setting">
+                    <h1>⋮</h1>
+                </div>
+            </div>
+            <!-- image -->
+            <div class="img">
+                <img src="https://pbs.twimg.com/media/FiOnFNvXoAMSLq1.jpg:large" alt="Content Image">
+            </div>
+            <!-- likes -->
+            <div class="likes">
+                <div class="first">
+                    <div id="heart">
+                        <img src="data:image/png;base64,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"
+                            alt="">
+                    </div>
+                    <span id="count"></span>
+                </div>
+                <div class="second">
+                    <button id="save1" onclick="saved()">Save🔖</button>
+                </div>
+            </div>
+            <!-- views -->
+            <div class="views">
+                <p>10.3 M Views</p>
+            </div>
+            <!-- description -->
+            <div class="desc">
+                Relaxing beneath beautiful blue sky...
+            </div>
+            <div class="date">
+                6 months ago
+            </div>
+        </div>
+    </div>
+    <script>
+         var click = document.getElementById("heart")
+        var count1 = document.getElementById("count")
+        var count = 0
+        click.addEventListener("click", function () {
+            count++
+            count1.textContent = count
+        })
+        function saved(){
+            alert("This post Has Been Saved")
+        }
+    </script>
+</body>
+
+</html>
